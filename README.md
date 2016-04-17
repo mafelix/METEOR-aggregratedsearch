@@ -1,0 +1,2 @@
+# METEOR-aggregratedsearch
+Meteor app:
