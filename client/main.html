@@ -3,23 +3,28 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
+  <h1>Welcome to Kpop!</h1>
+  <!-- partial/template rendering syntax -->
   {{> hello}}
-  {{> info}}
+  {{> search}}
+  {{> searchHistory}}
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="search">
+  <form>
+    <input type="text" id="searchBar"/>
+    <input type="submit" id="submitSearch"/>
+  </form>
 </template>
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
+<template name="searchHistory">
   <ul>
-    <li><a href="https://www.meteor.com/try">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com">Discussions</a></li>
+    {{#each histories}}
+      <li>{{history}}</li>
+    {{/each}}
   </ul>
+</template>
+
+<template name="hello">
+  <p>Welcome to the leading kpop search engine</p>
 </template>
